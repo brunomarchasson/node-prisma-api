@@ -1,0 +1,38 @@
+<mjml>
+  <mj-head>
+    <mj-attributes>
+      <mj-text color={{theme.textColor}} font-family="Lato"  line-height=1.5 />
+      <!-- <mj-text color={{theme.textColor}} font-family="Raleway"  line-height=1.5 /> -->
+      <!-- <mj-text color={{theme.textColor}} font-family="Roboto" line-height=1.5 /> -->
+    </mj-attributes>
+  </mj-head>
+  <mj-body background-color='{{theme.bgColor}}' >
+    <mj-spacer />
+
+    <mj-section background-color='{{theme.secondaryColor}}' border-radius='{{theme.round}}'>
+      <mj-column vertical-align="middle">
+        <mj-text align="center" color='{{theme.primaryColor}}' font-size="24px" font-weight="bold">{{vars.projectName}}</mj-text>
+        {{#if vars.projectDescription}}
+        <mj-text align="center" font-size="12px">{{vars.projectDescription}}</mj-text>
+        {{/if}}
+      </mj-column>
+    </mj-section>
+    <mj-spacer />
+    <mj-section  padding='20px' background-color='{{theme.secondaryColor}}' border-radius='{{theme.round}}'>
+      <mj-column vertical-align="middle">
+        <mj-text font-weight="bold" font-size="24px">{{vars.subject}}</mj-text>
+        <mj-text font-size="14px" color='{{theme.textColor}}'>{{{ breaklines  vars.text}}}</mj-text>
+        {{#if vars.action_name}}
+          <mj-button border-radius='{{theme.round}}' align="center" href='{{vars.action_url}}' background-color='{{theme.primaryColor}}' font-size="14px">{{vars.action_name}}</mj-button>
+        {{/if}}
+        <mj-text font-size="14px" color='{{theme.textColor}}'>{{{breaklines  vars.afterText}}}</mj-text>
+
+      </mj-column>
+    </mj-section>
+    <mj-section >
+      <mj-column>
+        <mj-text align="center" font-size="12px">All rights reserved ©</mj-text>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>
